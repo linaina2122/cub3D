@@ -1,0 +1,5 @@
+Parsing tests:
+./cub3D . 		!!!
+./cub3D cub     !!!
+./cub3D	""		!!!
+./cub3D .cub	
