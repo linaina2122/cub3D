@@ -6,14 +6,14 @@
 #    By: hcharef <hcharef@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/17 02:58:29 by bkamal            #+#    #+#              #
-#    Updated: 2023/05/19 23:51:36 by hcharef          ###   ########.fr        #
+#    Updated: 2023/05/20 14:20:12 by hcharef          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME     = cub3D
 CC       = cc
-CFLAGS   = -Wall -Wextra -Werror
-
+CFLAGS   = -Wall -Wextra -Werror -fsanitize=address -g3
+ 
 # PRSDIR   = sources/parsing
 2DMDIR	 = sources/2Dmap
 OBJDIR   = objects

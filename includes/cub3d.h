@@ -6,7 +6,7 @@
 /*   By: hcharef <hcharef@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 18:20:43 by bkamal            #+#    #+#             */
-/*   Updated: 2023/05/19 23:52:26 by hcharef          ###   ########.fr       */
+/*   Updated: 2023/05/21 02:12:41 by hcharef          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,14 @@ typedef struct	s_data {
 	int		endian;
 }	t_data;
 
+typedef struct s_text{
+	void	*img;
+	char	*addr;
+	int		bpp;
+	int		line_length;
+	int		endian;
+}t_text;
+
 typedef struct s_ray {
 	double xstep;
 	double ystep;
@@ -107,6 +115,7 @@ typedef struct s_ray {
 typedef struct s_my_struct{
 	int		keycode;
 	t_data	imge;
+	t_text	t;
 	char 	**map;
 	void 	*mlx_ptr;
 	void 	*win_ptr;
@@ -160,13 +169,14 @@ void 	rander(t_my_struct *m);
 void 	find_h_wall(t_my_struct *m);
 void 	find_v_wall(t_my_struct *m);
 void 	renderwalls(t_my_struct *m, double ray_angle);
-void 	walls(t_my_struct *m, double count);
+void 	walls(t_my_struct *m, int count);
 void	get_distance(t_my_struct *m);
 int		check_left_right(double angle);
 int		check_up_down(double angle);
 double	distance_of_two_points(t_my_struct *m, double d1, double d2);
 int	exiting(int keycode, t_my_struct *m);
 int	update(t_my_struct *m);
+void text_init(t_my_struct *m);
 
 //*******************************************************
 

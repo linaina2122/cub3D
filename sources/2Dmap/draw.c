@@ -6,7 +6,7 @@
 /*   By: hcharef <hcharef@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 01:15:00 by hcharef           #+#    #+#             */
-/*   Updated: 2023/05/19 23:48:59 by hcharef          ###   ########.fr       */
+/*   Updated: 2023/05/21 00:48:11 by hcharef          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,45 +31,45 @@ void	ft_put_pixel(t_my_struct *data, int x, int y, int color)
 	*(unsigned int *)dst = color;
 }
 
-void	draw_square(t_my_struct *m, int x, int y)
-{
-	int	i;
-	int	j;
+// void	draw_square(t_my_struct *m, int x, int y)
+// {
+// 	int	i;
+// 	int	j;
 
-	i = 0;
-	while (i < (SCALE * MINI_MAP_SCALE))
-	{
-		j = 0;
-		while (j < (SCALE * MINI_MAP_SCALE))
-		{
-			ft_put_pixel(m, x + j, y, 0x000000);
-			ft_put_pixel(m, x + j, y + i, 0x000000);
-			j++;
-		}
-		ft_put_pixel(m, x, y + i, 0x000000);
-		i++;
-	}
-}
+// 	i = 0;
+// 	while (i < (SCALE * MINI_MAP_SCALE))
+// 	{
+// 		j = 0;
+// 		while (j < (SCALE * MINI_MAP_SCALE))
+// 		{
+// 			ft_put_pixel(m, x + j, y, 0x000000);
+// 			ft_put_pixel(m, x + j, y + i, 0x000000);
+// 			j++;
+// 		}
+// 		ft_put_pixel(m, x, y + i, 0x000000);
+// 		i++;
+// 	}
+// }
 
-void	draw_back(t_my_struct *m, int x, int y)
-{
-	int	i;
-	int	j;
+// void	draw_back(t_my_struct *m, int x, int y)
+// {
+// 	int	i;
+// 	int	j;
 
-	i = 0;
-	while (i < (SCALE * MINI_MAP_SCALE))
-	{
-		j = 0;
-		while (j < (SCALE * MINI_MAP_SCALE))
-		{
-			ft_put_pixel(m, x + j, y, 0x000000);
-			ft_put_pixel(m, x + j, y + i, 0x000000);
-			j++;
-		}
-		ft_put_pixel(m, x, y + i, 0x000000);
-		i++;
-	}
-}
+// 	i = 0;
+// 	while (i < (SCALE * MINI_MAP_SCALE))
+// 	{
+// 		j = 0;
+// 		while (j < (SCALE * MINI_MAP_SCALE))
+// 		{
+// 			ft_put_pixel(m, x + j, y, 0x000000);
+// 			ft_put_pixel(m, x + j, y + i, 0x000000);
+// 			j++;
+// 		}
+// 		ft_put_pixel(m, x, y + i, 0x000000);
+// 		i++;
+// 	}
+// }
 
 void	draw(t_my_struct *m)
 {
